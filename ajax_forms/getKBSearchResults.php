@@ -2,7 +2,7 @@
 
 echo 'DEBUG_ get kb file <br/>';
 
-include_once "../admin/classes/domain/GOKbTools.php";
+include_once $_SERVER['DOCUMENT_ROOT']."resources/admin/classes/domain/GOKbTools.php";
 echo 'DEBUG_ after include ok name = '.$_POST['name'].'<br/>';
 
 $tool = GOKbTools::getInstance();
@@ -12,10 +12,6 @@ $tool = GOKbTools::getInstance();
 $a = $tool->searchByName($_POST['name'], "package");
 $b = $tool->searchByName($_POST['name'], "title");
 
-/*
-$a = $tool->searchByName("Arts", "package");
-$b = $tool->searchByName("Arts", "title");
-*/
 echo '<h4> Search results : </h4>';
 echo '<h5> Packages </h5>';
 
